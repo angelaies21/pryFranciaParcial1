@@ -36,7 +36,7 @@
             this.cmbRubro = new System.Windows.Forms.ComboBox();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +50,7 @@
             this.lnkDatos = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -62,6 +62,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // menuStrip1
             // 
@@ -70,7 +71,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(594, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(617, 29);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -111,6 +112,7 @@
             this.btnMostrar.TabIndex = 4;
             this.btnMostrar.Text = "Mostrar Articulos";
             this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // btnExportar
             // 
@@ -124,24 +126,25 @@
             this.btnExportar.UseVisualStyleBackColor = false;
             this.btnExportar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dgvDatos
+            // dgvArticulos
             // 
-            this.dgvDatos.AllowUserToDeleteRows = false;
-            this.dgvDatos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvArticulos.AllowUserToDeleteRows = false;
+            this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgvDatos.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dgvDatos.Location = new System.Drawing.Point(12, 163);
-            this.dgvDatos.MultiSelect = false;
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.ReadOnly = true;
-            this.dgvDatos.Size = new System.Drawing.Size(544, 209);
-            this.dgvDatos.TabIndex = 6;
+            this.dgvArticulos.GridColor = System.Drawing.SystemColors.ControlText;
+            this.dgvArticulos.Location = new System.Drawing.Point(12, 163);
+            this.dgvArticulos.MultiSelect = false;
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.ReadOnly = true;
+            this.dgvArticulos.Size = new System.Drawing.Size(544, 209);
+            this.dgvArticulos.TabIndex = 6;
+            this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             // 
             // Column1
             // 
@@ -216,6 +219,7 @@
             this.lblTotall.Name = "lblTotall";
             this.lblTotall.Size = new System.Drawing.Size(151, 21);
             this.lblTotall.TabIndex = 11;
+            this.lblTotall.Text = "$";
             // 
             // lnkDatos
             // 
@@ -232,14 +236,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(594, 428);
+            this.ClientSize = new System.Drawing.Size(617, 435);
             this.Controls.Add(this.lnkDatos);
             this.Controls.Add(this.lblTotall);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblCantida);
             this.Controls.Add(this.lblCant);
             this.Controls.Add(this.lblCantidad);
-            this.Controls.Add(this.dgvDatos);
+            this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.cmbRubro);
@@ -250,10 +254,11 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmGestion";
             this.Text = "Gestion de datos";
+            this.Load += new System.EventHandler(this.frmGestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,7 +273,7 @@
         private System.Windows.Forms.ComboBox cmbRubro;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnExportar;
-        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
