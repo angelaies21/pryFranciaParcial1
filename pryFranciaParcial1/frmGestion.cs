@@ -74,8 +74,8 @@ namespace pryFranciaParcial1
                 }
             }
 
-            lblCantidad.Text = cantidad.ToString();
-            lblTotal.Text = total.ToString();
+            lblCantida.Text = cantidad.ToString();
+            lblTotall.Text = total.ToString();
 
 
 

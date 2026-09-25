@@ -71,7 +71,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(617, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(596, 29);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -182,9 +182,9 @@
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.Location = new System.Drawing.Point(8, 388);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(167, 18);
+            this.lblCantidad.Size = new System.Drawing.Size(168, 18);
             this.lblCantidad.TabIndex = 7;
-            this.lblCantidad.Text = "Cantidad de Archivos";
+            this.lblCantidad.Text = "Cantidad de Articulos";
             // 
             // lblCant
             // 
@@ -224,7 +224,7 @@
             // lnkDatos
             // 
             this.lnkDatos.AutoSize = true;
-            this.lnkDatos.Location = new System.Drawing.Point(450, 29);
+            this.lnkDatos.Location = new System.Drawing.Point(492, 48);
             this.lnkDatos.Name = "lnkDatos";
             this.lnkDatos.Size = new System.Drawing.Size(55, 13);
             this.lnkDatos.TabIndex = 12;
@@ -236,7 +236,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(617, 435);
+            this.ClientSize = new System.Drawing.Size(596, 428);
             this.Controls.Add(this.lnkDatos);
             this.Controls.Add(this.lblTotall);
             this.Controls.Add(this.lblTotal);
