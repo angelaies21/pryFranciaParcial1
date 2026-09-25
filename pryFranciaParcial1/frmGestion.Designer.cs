@@ -58,7 +58,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-1, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(597, 402);
+            this.pictureBox1.Size = new System.Drawing.Size(597, 434);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -81,6 +81,7 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(55, 25);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // lblRubro
             // 
@@ -199,14 +200,14 @@
             this.lblCantida.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCantida.Location = new System.Drawing.Point(181, 387);
             this.lblCantida.Name = "lblCantida";
-            this.lblCantida.Size = new System.Drawing.Size(143, 21);
+            this.lblCantida.Size = new System.Drawing.Size(110, 21);
             this.lblCantida.TabIndex = 9;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(353, 388);
+            this.lblTotal.Location = new System.Drawing.Point(322, 388);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(46, 18);
             this.lblTotal.TabIndex = 10;
@@ -215,21 +216,21 @@
             // lblTotall
             // 
             this.lblTotall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTotall.Location = new System.Drawing.Point(405, 387);
+            this.lblTotall.Location = new System.Drawing.Point(374, 387);
             this.lblTotall.Name = "lblTotall";
-            this.lblTotall.Size = new System.Drawing.Size(151, 21);
+            this.lblTotall.Size = new System.Drawing.Size(158, 21);
             this.lblTotall.TabIndex = 11;
-            this.lblTotall.Text = "$";
             // 
             // lnkDatos
             // 
             this.lnkDatos.AutoSize = true;
-            this.lnkDatos.Location = new System.Drawing.Point(492, 48);
+            this.lnkDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkDatos.Location = new System.Drawing.Point(236, 426);
             this.lnkDatos.Name = "lnkDatos";
-            this.lnkDatos.Size = new System.Drawing.Size(55, 13);
+            this.lnkDatos.Size = new System.Drawing.Size(178, 16);
             this.lnkDatos.TabIndex = 12;
             this.lnkDatos.TabStop = true;
-            this.lnkDatos.Text = "linkLabel1";
+            this.lnkDatos.Text = "//htps: datosDeAlumnos2026";
             this.lnkDatos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkDatos_LinkClicked);
             // 
             // frmGestion
@@ -237,7 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(596, 428);
+            this.ClientSize = new System.Drawing.Size(596, 461);
             this.Controls.Add(this.lnkDatos);
             this.Controls.Add(this.lblTotall);
             this.Controls.Add(this.lblTotal);

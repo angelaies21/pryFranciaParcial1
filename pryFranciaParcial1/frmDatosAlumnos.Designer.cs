@@ -30,67 +30,76 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosAlumnos));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblNom = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.lblAnalis = new System.Windows.Forms.Label();
+            this.lblLabo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(643, 330);
+            this.pictureBox1.Size = new System.Drawing.Size(426, 306);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lblNom
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(102, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.lblNom.AutoSize = true;
+            this.lblNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNom.Location = new System.Drawing.Point(50, 181);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(146, 18);
+            this.lblNom.TabIndex = 1;
+            this.lblNom.Text = "Nombre Completo";
             // 
-            // label2
+            // lblDni
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(102, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.lblDni.AutoSize = true;
+            this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDni.Location = new System.Drawing.Point(50, 139);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(36, 18);
+            this.lblDni.TabIndex = 2;
+            this.lblDni.Text = "DNI";
             // 
-            // textBox1
+            // lblAnalis
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.lblAnalis.AutoSize = true;
+            this.lblAnalis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnalis.Location = new System.Drawing.Point(50, 64);
+            this.lblAnalis.Name = "lblAnalis";
+            this.lblAnalis.Size = new System.Drawing.Size(156, 18);
+            this.lblAnalis.TabIndex = 3;
+            this.lblAnalis.Text = "Analista de Sistema";
+            this.lblAnalis.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
+            // lblLabo
             // 
-            this.textBox2.Location = new System.Drawing.Point(190, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.lblLabo.AutoSize = true;
+            this.lblLabo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLabo.Location = new System.Drawing.Point(50, 100);
+            this.lblLabo.Name = "lblLabo";
+            this.lblLabo.Size = new System.Drawing.Size(218, 18);
+            this.lblLabo.TabIndex = 4;
+            this.lblLabo.Text = "Laboratorio d programacion";
             // 
             // frmDatosAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 332);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(426, 311);
+            this.Controls.Add(this.lblLabo);
+            this.Controls.Add(this.lblAnalis);
+            this.Controls.Add(this.lblDni);
+            this.Controls.Add(this.lblNom);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmDatosAlumnos";
-            this.Text = "frmDatosAlumnos";
+            this.Text = "Instancia Evaluativa";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -100,9 +109,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblNom;
+        private System.Windows.Forms.Label lblDni;
+        private System.Windows.Forms.Label lblAnalis;
+        private System.Windows.Forms.Label lblLabo;
     }
 }

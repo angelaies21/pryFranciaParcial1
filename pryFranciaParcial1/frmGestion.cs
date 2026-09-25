@@ -98,8 +98,7 @@ namespace pryFranciaParcial1
 
         private void frmGestion_Load(object sender, EventArgs e)
         {
-
-            StreamReader archivoRubros = new StreamReader("RUBROS.csv");
+            StreamReader archivoRubros = new StreamReader("Archivos\\RUBROS.csv");
 
             cmbRubro.Items.Clear();
 
@@ -113,7 +112,7 @@ namespace pryFranciaParcial1
             archivoRubros.Close();
 
 
-            StreamReader archivoArticulos = new StreamReader("ARTICULOS.csv");
+            StreamReader archivoArticulos = new StreamReader("Archivos\\ARTICULOS.csv");
 
             articulos = new clsArticulo[12];
 
@@ -144,9 +143,13 @@ namespace pryFranciaParcial1
 
         private void lnkDatos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //frmAlumnos formulario = new frmAlumnos();
-            //formulario.Show();
-            //this.Hide();
+            frmDatosAlumnos formulario = new frmDatosAlumnos();
+            formulario.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
