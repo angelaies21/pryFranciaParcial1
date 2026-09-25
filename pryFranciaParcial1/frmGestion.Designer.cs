@@ -230,6 +230,7 @@
             this.lnkDatos.TabIndex = 12;
             this.lnkDatos.TabStop = true;
             this.lnkDatos.Text = "linkLabel1";
+            this.lnkDatos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkDatos_LinkClicked);
             // 
             // frmGestion
             // 

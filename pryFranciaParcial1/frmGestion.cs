@@ -30,15 +30,24 @@ namespace pryFranciaParcial1
         {
             StreamWriter archivo = new StreamWriter("ARTICULOS_EXPORTADOS.csv");
 
+            archivo.WriteLine("Código;Descripción;Costo;Stock;Valor en Stock");
+
             for (int i = 0; i < articulos.Length; i++)
             {
-                archivo.WriteLine(
-                    articulos[i].Codigo + ";" +
-                    articulos[i].Descripcion + ";" +
-                    articulos[i].Costo + ";" +
-                    articulos[i].Rubro + ";" +
-                    articulos[i].Stock
-                );
+                if (articulos[i].Rubro == cmbRubro.Text)
+                {
+                    double valorStock;
+
+                    valorStock = articulos[i].Costo * articulos[i].Stock;
+
+                    archivo.WriteLine(
+                        articulos[i].Codigo + ";" +
+                        articulos[i].Descripcion + ";" +
+                        articulos[i].Costo + ";" +
+                        articulos[i].Stock + ";" +
+                        valorStock
+                    );
+                }
             }
 
             archivo.Close();
@@ -131,6 +140,13 @@ namespace pryFranciaParcial1
         private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void lnkDatos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //frmAlumnos formulario = new frmAlumnos();
+            //formulario.Show();
+            //this.Hide();
         }
     }
 }
